@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaRegStar } from "react-icons/fa";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useSelector } from 'react-redux';
 import slugify from "slugify";
 import { activities } from '../utils/activities';
+import { FaSpotify } from "react-icons/fa";
 
 // Sidebar component that suggests activities based on current weather
 function SideBar({ showSidebar, setShowSidebar }) {
@@ -14,7 +15,7 @@ function SideBar({ showSidebar, setShowSidebar }) {
   const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   // Destructure values from Redux store
-  const { city, country, currWeather, currentMain } = useSelector(state => state.geo);
+  const { city, country, currWeather, currentMain, timeShift } = useSelector(state => state.geo);
 
   // Generate a slug from the current weather to match keys in `activities`
   const slug = slugify(`${currWeather}`, '_');
@@ -30,6 +31,26 @@ function SideBar({ showSidebar, setShowSidebar }) {
 //     console.log(activities[slug]);
 //   }, [slug]);
 
+      const nowUTC = new Date(Date.now());
+        
+      // Convert seconds to milliseconds
+      const offsetMs = timeShift*1000 ;
+
+      // Adjust time based on UTC offset
+      // If running locally make sure to adjust the value, for india subtarct 5*60*60*1000
+      const localTime = new Date(nowUTC.getTime() + offsetMs);
+
+      // Format the date and time
+      const formatted = localTime.toLocaleString('en-US', {
+        weekday: 'long',     
+        year: 'numeric',
+        month: 'long',       
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      });
+
   return (
     <div>
       {/* Overlay when sidebar is open (closes on click) */}
@@ -44,7 +65,7 @@ function SideBar({ showSidebar, setShowSidebar }) {
         {/* Header section with day, location, temperature, and close button */}
         <div className='flex justify-between items-center'>
           <div className='flex flex-col'>
-            <div className='font-extralight text-2xl'>{weekday[day]}</div>
+            <div className='font-extralight text-2xl'>{formatted}</div>
             <div className='text-sm uppercase'>{city}, {country}</div>
           </div>
 
@@ -82,13 +103,13 @@ function SideBar({ showSidebar, setShowSidebar }) {
           }
 
           {/* Unused static block (has a bug in image syntax — should be removed or fixed) */}
-          {/* 
-          <div
-            style={{ backgroundImage: `url(${activities[slug][0].ImageSource})` }} 
-            className="h-[85px] text-white bg-cover bg-center rounded-3xl"
-          />
-          */}
-        </div>
+          <a href={`${activities[slug]?activities[slug][0].Playlist:''}`} className="h-[85px] overflow-hidden text-white flex items-center px-4 py-3 justify-between bg-[#000] hover:bg-[#2d2d2d] rounded-3xl" >
+            <FaSpotify  className='text-[#1ED760] h-[30px] w-[30px]'/>
+            <span className='font-extralight ml-2'>A perfect playlist for the perfect weather</span>
+          </a>
+            
+
+          </div>
       </div>
     </div>
   );

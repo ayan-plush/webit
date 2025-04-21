@@ -150,6 +150,7 @@ export const geoReducer = createSlice({
     currentMain: null,
     pm10: null,
     wind: null,
+    timeShift: null,
     coordinates: null,
     selectedCity: null,
   },
@@ -190,6 +191,7 @@ export const geoReducer = createSlice({
       })
       .addCase(fetchWeatherData.fulfilled, (state, { payload }) => {
         state.loader = false;
+        state.timeShift = payload.current.timezone;
         state.city = payload.current.name;
         state.country = payload.current.sys.country;
         state.currentMain = payload.current.main;

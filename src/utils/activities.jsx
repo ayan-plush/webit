@@ -2,7 +2,8 @@ export const activities = {
     clear_sky: [
         {
             Activity: "Go for a hike or nature walk",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'
         },
         {
             Activity: "Have a picnic in the park",
@@ -20,7 +21,8 @@ export const activities = {
    few_clouds: [
         {
             Activity: "Go for a hike or nature walk",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'
         },
         {
             Activity: "Plan a short outdoor picnic.",
@@ -38,7 +40,8 @@ export const activities = {
     scattered_clouds: [
         {
             Activity: "Go for a hike or nature walk",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'
         },
         {
             Activity: "Plan a short outdoor picnic.",
@@ -56,7 +59,8 @@ export const activities = {
     overcast_clouds: [
         {
             Activity: "Go for a hike or nature walk",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745229254/e59dbfc143efa105e3ea8d21612c27ca_a5ikl3.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'
         },
         {
             Activity: "Plan a short outdoor picnic.",
@@ -74,7 +78,8 @@ export const activities = {
     broken_clouds: [
         {
             Activity: "Take a scenic drive or road trip.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239471/ef72edc2908de67baa3af12a7e852490_vca3zf.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239471/ef72edc2908de67baa3af12a7e852490_vca3zf.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'
         },
         {
             Activity: "Plan a short outdoor picnic.",
@@ -92,7 +97,8 @@ export const activities = {
     shower_rain: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIh5QTm0PNBlW'
         },
         {
             Activity: "Bake something warm and comforting.",
@@ -110,7 +116,8 @@ export const activities = {
     rain: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIh5QTm0PNBlW'
         },
         {
             Activity: "Bake something warm and comforting.",
@@ -128,7 +135,8 @@ export const activities = {
     thunderstorm: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIh5QTm0PNBlW'
         },
         {
             Activity: "Bake something warm and comforting.",
@@ -146,7 +154,8 @@ export const activities = {
     snow: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIgy8enUfNX0u'
         },
         {
             Activity: "Bake something warm and comforting.",
@@ -164,7 +173,8 @@ export const activities = {
     mist: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
-            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg'
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIgy8enUfNX0u'
         },
         {
             Activity: "Bake something warm and comforting.",

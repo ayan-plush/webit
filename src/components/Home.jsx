@@ -10,6 +10,8 @@ import AQISlider from './Aqislider';
 // Icons
 import { CiMenuBurger } from "react-icons/ci";
 import { TiWeatherPartlySunny } from "react-icons/ti";
+import { MdAir } from "react-icons/md";
+
 
 // API constants
 import { WEATHER_APIURL } from '../api/api';
@@ -33,7 +35,7 @@ function Home() {
   const [minTemp, setMinTemp] = useState(null);
 
   // Redux store states
-  const { city, country, currentMain, currWeather, pm10 } = useSelector(state => state.geo);
+  const { city, country, currentMain, currWeather, pm10, timeShift } = useSelector(state => state.geo);
 
   // Optional debug useEffect
   // useEffect(() => {
@@ -51,6 +53,17 @@ function Home() {
       setMinTemp(min_Temp);
     }
   }, [forecast]);
+
+  
+
+
+
+
+
+
+
+
+
 
   /**
    * Handles search changes and dispatches API calls.
@@ -133,16 +146,16 @@ function Home() {
                     </div>
                   </div>
                   {/* Feels Like */}
-                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#7F7A11]">
-                    <div className="text-sm font-light text-[#fff]">Feels Like</div>
-                    <div className="text-md xl:text-xl font-semibold text-[#fff]">
+                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#CCE267]">
+                    <div className="text-sm font-light text-[#000]">Feels Like</div>
+                    <div className="text-md xl:text-xl font-semibold text-[#000]">
                       {Math.trunc(currentMain?.feels_like)}°C
                     </div>
                   </div>
                   {/* Humidity */}
-                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#E3B22D]">
-                    <div className="text-sm font-light text-[#fff]">Humidity</div>
-                    <div className="text-md xl:text-xl font-semibold text-[#fff]">
+                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#fff]">
+                    <div className="text-sm font-light text-[#000]">Humidity</div>
+                    <div className="text-md xl:text-xl font-semibold text-[#000]">
                       {currentMain?.humidity}%
                     </div>
                   </div>
@@ -155,7 +168,7 @@ function Home() {
               <div className="gap-3 p-5 flex h-full bg-[#00000043] flex-col w-full">
                 <div className="h-full lg:w-7/12 flex items-center">
                   <div className="w-[40px] h-[40px] text-[#ffa600] mx-3 rounded-full bg-[#fff] flex items-center justify-center">
-                    <TiWeatherPartlySunny />
+                    <MdAir />
                   </div>
 
                   <div>
@@ -167,7 +180,7 @@ function Home() {
                 <div className="w-full h-full mx-3 flex flex-col justify-center items-start">
                   <div className="flex items-center justify-start gap-4 w-5/12">
                     <div className="text-4xl w-[50px] font-semibold text-[#fff]">125</div>
-                    <div className="text-sm bg-[#827B11] text-[#fff] h-fit p-1 rounded-md">AQI</div>
+                    <div className="text-sm bg-[#CCE267] text-[#fff] h-fit p-1 rounded-md">AQI</div>
                   </div>
                 </div>
 
@@ -200,7 +213,7 @@ function Home() {
                       <div className="w-full h-full flex flex-col">
                         <div className="flex flex-col  justify-start gap-4 w-5/12">
                           <div className="text-4xl font-semibold text-[#fff]">{Math.trunc(forecastData?.main?.temp)}°C</div>
-                          <div className="text-sm  text-[#fff] ">{forecastData?.weather[0]?.main}</div>
+                          <div className="text-sm text-[#fff] ">{forecastData?.weather[0]?.main}</div>
                         </div>
                       </div>
                 </div>
