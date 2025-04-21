@@ -77,7 +77,7 @@ function Home() {
 
         {/* Header */}
         <div className="header flex justify-between items-center w-full md:h-[80px] p-5">
-          <div className="uppercase">
+          <div className="uppercase max-lg:hidden">
             <div className="md:text-xl font-extralight">Hello,</div>
             <div className="md:text-2xl">Username</div>
           </div>
