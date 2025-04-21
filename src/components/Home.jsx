@@ -188,7 +188,7 @@ function Home() {
             </div>
 
             {/* Placeholder Card */}
-            <div className="container-4 w-full md:w-1/3 rounded-3xl h-[285px] bg-cover bg-center bg-[url('https://res.cloudinary.com/decks92gf/image/upload/v1745064501/32f4ffa2c10fcd33a525a084956d432a_tg1vzv.jpg')]">
+            <div className="container-4 w-full md:w-1/3 overflow-hidden rounded-3xl h-[285px] bg-cover bg-center bg-[url('https://res.cloudinary.com/decks92gf/image/upload/v1745064501/32f4ffa2c10fcd33a525a084956d432a_tg1vzv.jpg')]">
                 <div className="gap-3 p-5 flex h-full bg-[#00000043] flex-col w-full">
                       <div className="h-full lg:w-7/12 flex items-center">
                         <div>
