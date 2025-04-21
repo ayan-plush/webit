@@ -38,17 +38,17 @@ function SideBar({ showSidebar, setShowSidebar }) {
 
       // Adjust time based on UTC offset
       // If running locally make sure to adjust the value, for india subtarct 5*60*60*1000
-      const localTime = new Date(nowUTC.getTime() + offsetMs);
+      const localTime = new Date(nowUTC.getTime() + offsetMs -5*60*60*1000);
 
       // Format the date and time
       const formatted = localTime.toLocaleString('en-US', {
         weekday: 'long',     
-        year: 'numeric',
-        month: 'long',       
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true,
+        // year: 'numeric',
+        // month: 'long',       
+        // day: 'numeric',
+        // hour: '2-digit',
+        // minute: '2-digit',
+        // hour12: true,
       });
 
   return (
