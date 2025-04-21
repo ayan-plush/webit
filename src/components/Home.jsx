@@ -141,8 +141,8 @@ function Home() {
                   {/* Pressure */}
                   <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#303030]">
                     <div className="text-sm font-light text-[#fff]">Pressure</div>
-                    <div className="text-md xl:text-xl font-semibold text-[#fff]">
-                      {currentMain?.pressure} hPa
+                    <div className="text-md xl:text-xl flex items-center font-semibold text-[#fff]">
+                      {currentMain?.pressure} <span className='text-sm font-light'>hpa</span>
                     </div>
                   </div>
                   {/* Feels Like */}
