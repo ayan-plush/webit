@@ -3,6 +3,7 @@ import './App.css'
 import SideBar from './components/SideBar'
 import Home from './components/Home'
 import toast from 'react-hot-toast'
+import Landing from './components/Landing'
 
 
 function App() {
@@ -11,8 +12,10 @@ function App() {
   // },[])
   return (
     <div>
-
-        <Home/>
+      {
+        localStorage.name?<Home/>:<Landing/>
+      }
+        
 
     </div>
   )

@@ -37,6 +37,8 @@ function Home() {
   // Redux store states
   const { city, country, currentMain, currWeather, pm10, timeShift } = useSelector(state => state.geo);
 
+  const username = localStorage.getItem('name')
+
   // Optional debug useEffect
   // useEffect(() => {
   //   if (currentWeather) {
@@ -55,15 +57,6 @@ function Home() {
   }, [forecast]);
 
   
-
-
-
-
-
-
-
-
-
 
   /**
    * Handles search changes and dispatches API calls.
@@ -92,7 +85,7 @@ function Home() {
         <div className="header flex justify-between items-center w-full md:h-[80px] p-5">
           <div className="uppercase max-lg:hidden">
             <div className="md:text-xl font-extralight">Hello,</div>
-            <div className="md:text-2xl">Username</div>
+            <div className="md:text-2xl">{username}</div>
           </div>
 
           <Search onSearchChange={handleOnSearchChange} />
@@ -137,23 +130,23 @@ function Home() {
                 </div>
 
                 {/* Additional Weather Details */}
-                <div className="w-full h-full px-3 flex items-center gap-3 justify-between">
+                <div className="w-full h-full  flex items-center gap-3 justify-between">
                   {/* Pressure */}
-                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#303030]">
+                  <div className="w-1/3 h-full flex flex-col p-3 items-center justify-between rounded-md bg-[#303030]">
                     <div className="text-sm font-light text-[#fff]">Pressure</div>
                     <div className="text-md xl:text-xl flex items-center font-semibold text-[#fff]">
                       {currentMain?.pressure} <span className='text-sm font-light'>hpa</span>
                     </div>
                   </div>
                   {/* Feels Like */}
-                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#CCE267]">
-                    <div className="text-sm font-light text-[#000]">Feels Like</div>
+                  <div className="w-1/3 h-full flex flex-col p-3 items-center justify-between rounded-md bg-[#CCE267]">
+                    <div className="text-sm  font-light text-[#000]">Feels Like</div>
                     <div className="text-md xl:text-xl font-semibold text-[#000]">
                       {Math.trunc(currentMain?.feels_like)}°C
                     </div>
                   </div>
                   {/* Humidity */}
-                  <div className="w-full h-full flex flex-col p-3 items-center rounded-md bg-[#fff]">
+                  <div className="w-1/3 h-full flex flex-col p-3 items-center justify-between rounded-md bg-[#fff]">
                     <div className="text-sm font-light text-[#000]">Humidity</div>
                     <div className="text-md xl:text-xl font-semibold text-[#000]">
                       {currentMain?.humidity}%
