@@ -10,7 +10,7 @@ export const fetchCityOptions = createAsyncThunk(
     try {
       const response = await geoApi.get('/cities', {
         params: {
-          minPopulation: 1000000,
+          minPopulation: 10000,
           namePrefix: inputValue,
         },
       });

@@ -35,7 +35,7 @@ function Home() {
   const [minTemp, setMinTemp] = useState(null);
 
   // Redux store states
-  const { city, country, currentMain, currWeather, pm10 } = useSelector(state => state.geo);
+  const { city, country, currentMain, currWeather, pm10, aqi } = useSelector(state => state.geo);
 
   const username = localStorage.getItem('name')
 
@@ -172,7 +172,7 @@ function Home() {
 
                 <div className="w-full h-full mx-3 flex flex-col justify-center items-start">
                   <div className="flex items-center justify-start gap-4 w-5/12">
-                    <div className="text-4xl w-[50px] font-semibold text-[#fff]">125</div>
+                    <div className="text-4xl w-[50px] font-semibold text-[#fff]">{aqi}</div>
                     <div className="text-sm bg-[#CCE267] text-[#fff] h-fit p-1 rounded-md">AQI</div>
                   </div>
                 </div>
