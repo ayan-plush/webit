@@ -35,7 +35,7 @@ function Home() {
   const [minTemp, setMinTemp] = useState(null);
 
   // Redux store states
-  const { city, country, currentMain, currWeather, pm10, timeShift } = useSelector(state => state.geo);
+  const { city, country, currentMain, currWeather, pm10 } = useSelector(state => state.geo);
 
   const username = localStorage.getItem('name')
 

@@ -113,6 +113,25 @@ export const activities = {
             ImageSource: "https://res.cloudinary.com/decks92gf/image/upload/v1745239722/77aeca16630e5e166544ffbedff8b791_s93efr.jpg"
         }
     ],
+    light_rain: [
+        {
+            Activity: "Watch a movie with a cozy blanket and snacks.",
+            ImageSource: 'https://res.cloudinary.com/decks92gf/image/upload/v1745239722/7bd25907ab4e39deb1983d6f30650489_ck7abv.jpg',
+            Playlist: 'https://open.spotify.com/playlist/37i9dQZF1EIh5QTm0PNBlW'
+        },
+        {
+            Activity: "Bake something warm and comforting.",
+            ImageSource: "https://res.cloudinary.com/decks92gf/image/upload/v1745239722/d0be7844baed4dcd515b68f5bbac077b_ldtsxw.jpg"
+        },
+        {
+            Activity: "Sit near a window and journal or read—great ambiance.",
+            ImageSource: "https://res.cloudinary.com/decks92gf/image/upload/v1745239721/7b600af5cbfa2f195b5abfe872e9355e_epdfrp.jpg"
+        },
+        {
+            Activity: "Go for a moody, romantic walk with an umbrella.",
+            ImageSource: "https://res.cloudinary.com/decks92gf/image/upload/v1745239722/77aeca16630e5e166544ffbedff8b791_s93efr.jpg"
+        }
+    ],
     rain: [
         {
             Activity: "Watch a movie with a cozy blanket and snacks.",
