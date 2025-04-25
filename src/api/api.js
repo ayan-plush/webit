@@ -29,6 +29,19 @@ export const geoApi = axios.create({
   },
 });
 
+
+/* -----------------------------------------------
+   Axios Instance: GeoDB API
+------------------------------------------------ */
+
+// Preconfigured axios instance for GeoDB API
+export const openCageApi = axios.create({
+  baseURL: 'https://api.opencagedata.com/geocode/v1/json?',
+  headers: {
+  },
+});
+
+
 /* -----------------------------------------------
    Axios Instance: OpenWeatherMap API
 ------------------------------------------------ */

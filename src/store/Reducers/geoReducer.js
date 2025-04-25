@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { aqiApi, geoApi, weatherApi } from "../../api/api";
+import { aqiApi, geoApi, openCageApi, weatherApi } from "../../api/api";
 
 /* -----------------------------------------------
    Async Thunk: Fetch matching city options for search input
@@ -10,7 +10,7 @@ export const fetchCityOptions = createAsyncThunk(
     try {
       const response = await geoApi.get('/cities', {
         params: {
-          minPopulation: 10000,
+          minPopulation: 100,
           namePrefix: inputValue,
         },
       });
@@ -32,6 +32,8 @@ export const fetchCityOptions = createAsyncThunk(
     }
   }
 );
+
+
 
 /* -----------------------------------------------
    Async Thunk: Fetch 5-day weather forecast
